@@ -1,0 +1,28 @@
+.container .items {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bolder;
+    user-select: none;
+}
+
+.container .dark {
+    color: white;
+}
+
+.container .light {
+    color: black;
+}
+
+.container .items .item {
+    margin: 0 10px;
+    padding: 5px 10px;
+    /*border-bottom: 3px solid transparent; !* 设置一个初始状态的透明边框 *!*/
+    transition: 0.4s border-bottom-color linear;
+}
+
+.container .items .item:hover {
+    cursor: pointer;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,28 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container .content {
+    font-size: 1.5rem;
+    width: 800px;
+    text-align: justify;
+}
+
+.container .content div {
+    margin-bottom: 20px;
+}
+
+.dark {
+    color: white;
+}
+
+.light {
+    color: black;
+}

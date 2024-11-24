@@ -1,0 +1,35 @@
+.dark {
+    color: white;
+}
+
+.light {
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+    scroll-snap-align: start;
+}
+
+.container div {
+    margin: 5px 0;
+    user-select: none;
+}
+
+.container div:first-child {
+    /*background-color: deepskyblue;*/
+    font-size: 4rem;
+    font-weight: bolder;
+    text-shadow: 0.1rem 0.1rem 0.5rem;
+}
+.container div:last-child {
+    font-size: 2rem;
+    color: #2944dc;
+    text-shadow: 0.1rem 0.1rem 0.5rem;
+}

@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 93vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}

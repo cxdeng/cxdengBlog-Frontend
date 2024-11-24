@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .content {
+    padding: 0 20px;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+/* 定义基础的开关样式 */
+.switch {
+    position: relative;      /* 使用相对定位，这样子元素的绝对定位将相对于此元素 */
+    display: inline-block;   /* 使其内联块显示，使其既具有块级元素的特性，又可以放置在行内 */
+    width: 56px;             /* 定义开关的宽度 */
+    height: 30px;            /* 定义开关的高度 */
+}
+
+/* 隐藏实际的复选框元素 */
+.switch input {
+    opacity: 0;              /* 使其完全透明 */
+    width: 0;                /* 将宽度设为0 */
+    height: 0;               /* 将高度设为0 */
+}
+
+/* 定义滑块的样式 */
+.slider {
+    position: absolute;      /* 绝对定位，使其可以被放置在父元素中的任意位置 */
+    cursor: pointer;         /* 当鼠标悬停时，将鼠标指针变为手形 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #808080; /* 默认背景颜色 */
+    transition: .4s;        /* 过渡效果使滑块移动更平滑 */
+    border-radius: 34px;    /* 圆角效果 */
+}
+
+/* 定义滑块的圆形按钮样式 */
+.slider:before {
+    position: absolute;
+    content: "";             /* 这是一个伪元素，需要内容属性，但可以为空 */
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;/* 圆形按钮的颜色 */
+    transition: .4s;        /* 过渡效果 */
+    border-radius: 50%;     /* 使其完全圆形 */
+}
+
+/* 当复选框被选中时，改变滑块的背景颜色 */
+input:checked + .slider {
+    background-color: #000000;
+}
+
+/* 当复选框被选中时，移动滑块的圆形按钮到另一侧 */
+input:checked + .slider:before {
+    transform: translateX(26px);  /* 使用transform进行水平移动 */
+}
